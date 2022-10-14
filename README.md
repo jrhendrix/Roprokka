@@ -1,7 +1,7 @@
 # Report On PROKKA
-Add on to the bacterial annotation tool, [Prokka](https://github.com/tseemann/prokka). Roprokka gathers and computes metrics on Prokka output and consolidates information in one convenient results file. Tool does not run Prokka or comment on the significance of results.
+[Prokka](https://github.com/tseemann/prokka) is a commonly used tool to annotate bacterial genomes. Roprokka (Row-pro-ka) is an add-on tool that gathers information from and computes metrics on Prokka output. Further, Roprokka will align common species identifier genes against the NCBI database and return the most similar species. The information is consolidated into one convenient results file to quickly assess the status of a bacterial genome assembly. Note that this tool does not run Prokka or comment on the significance of results.
 
-## About Roprokka
+## About this tool
 Prokka is a bioinformatics tool for annotating bacterial, archaeal, and vial genome assemblies. Output files are generated that contain a lot of information, including the annotation list, annotation sequences (nucleic acid and amino acid), and assembly statistics (Seemann, 2014). The information can be time consuming to gather when there are many samples, but the standard output format of the Prokka software makes it a good candidate for an automated mining system.
 
 ## Getting Started
@@ -15,29 +15,22 @@ Prokka is a bioinformatics tool for annotating bacterial, archaeal, and vial gen
 ### Installation
 Roprokka is available on [PyPI](https://pypi.org/project/roprokka/) and can be installed using pip.
 
-`pip install roprokka`
+```
+pip install roprokka
+```
 
 
 ## Usage
 
 As input, this script takes a path to the directory of Prokka output.
 
-Example: `roprokka -b path/to/blastn -i input_directory -o ouput_directory`
-
-
-
+Example: 
+```
+roprokka -b path/to/blastn -i input_directory -o ouput_directory
+```
 
 
 ## TL;DR
-
-Contents
-
-0. Run Prokka
-1. Record assembly stats
-2. Calculate % hypothetical proteins
-3. BLAST species identifying genes
-4. Plasmid detection
-
 
 ### Basic Assembly Stats
 Displays the statistics presented in the Prokka `.tsv` file. Note, the statistics reported in this section are entirely dependendent upon the Prokka run parameters. For example, non-coding RNAs (ncRNAs) will only be reported if Prokka was run with the `--rfam` parameter.
@@ -75,7 +68,7 @@ Example Codon Table
 
 |           |           |           |           |           |
 | --------- | --------- | --------- | --------- | --------- |
-| Ala:3 | Arg:4 | ASN:2 | Asp: 1 | Cys: 2 |
+| Ala:3 | Arg:4 | Asn:2 | Asp: 1 | Cys: 2 |
 | Gln:2 | Glu:2 | Gly:3 | His:1 | Ile:1 |
 | Leu:5 | Lys:2 | Met:3 | Phe:1 | Pro:3 |
 | Ser:4 | Thr:3 | Trp:1 | Tyr:1 | Val:3 |
