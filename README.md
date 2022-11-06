@@ -9,7 +9,7 @@ Prokka is a bioinformatics tool for annotating bacterial, archaeal, and vial gen
 ### Requirements
 * Prokka output. Before applying this tool, run [Prokka](https://github.com/tseemann/prokka). 
 * pysam
-* blastn 2.10.1+
+* blast+ 2.10.1+
 * python 3.7+
 
 ### Installation
