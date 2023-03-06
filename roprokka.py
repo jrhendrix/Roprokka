@@ -708,7 +708,7 @@ if __name__ == "__main__":
 	parent_parser.add_argument('-i', '--input_directory', help='Path to input directory')
 	parent_parser.add_argument('-o', default="out", help='Prefix of output directory', type=str)
 	parent_parser.add_argument('-p', default=cwd, help='Path to output', type=str)
-	parent_parser.add_argument('--version', action='version', version='%(prog)s 0.0.8')
+	parent_parser.add_argument('--version', action='version', version='%(prog)s 0.0.4')
 	subparsers = parent_parser.add_subparsers(help='sub-command help')
 
 	args = parent_parser.parse_args()
