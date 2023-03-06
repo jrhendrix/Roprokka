@@ -18,15 +18,21 @@ Roprokka is available on [PyPI](https://pypi.org/project/roprokka/) and can be i
 ```
 pip install roprokka
 ```
-
+OR
+Download `.py` file from GitHub
 
 ## Usage
 
 As input, this script takes a path to the directory of Prokka output.
 
-Example: 
+Example using PYPI install: 
 ```
 roprokka -b path/to/blastn -i input_directory -o ouput_directory
+```
+
+Example using GitHub download:
+```
+python roprokka.py -b path/to/blastn -i input_directory -o ouput_directory
 ```
 
 
